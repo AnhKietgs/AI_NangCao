@@ -16,22 +16,30 @@ from typing import Dict, List, Tuple, Optional
 # PART 1: TEXT PREPROCESSING  (tokenisation + cleaning)
 # ──────────────────────────────────────────────────────────────
 
+# def preprocess(text: str) -> List[str]:
+#     """
+#     Clean raw text and return a list of lowercase tokens.
+
+#     Steps:
+#       1. Lower-case everything.
+#       2. Remove non-alphabetic characters (keep spaces).
+#       3. Split on whitespace.
+#       4. Filter empty strings.
+#     """
+#     text = text.lower()
+#     text = re.sub(r"[^a-z\s]", " ", text)   # keep only a-z and spaces
+#     tokens = text.split()
+#     return [t for t in tokens if t]          # remove empty strings
+
 def preprocess(text: str) -> List[str]:
-    """
-    Clean raw text and return a list of lowercase tokens.
-
-    Steps:
-      1. Lower-case everything.
-      2. Remove non-alphabetic characters (keep spaces).
-      3. Split on whitespace.
-      4. Filter empty strings.
-    """
+    # Chuyển về chữ thường
     text = text.lower()
-    text = re.sub(r"[^a-z\s]", " ", text)   # keep only a-z and spaces
-    tokens = text.split()
-    return [t for t in tokens if t]          # remove empty strings
-
-
+    
+    # Regex mới: Giữ lại a-z, khoảng trắng VÀ các ký tự tiếng Việt có dấu
+    # Bạn có thể dùng dải ký tự cụ thể hoặc đơn giản là giữ lại chữ cái Unicode
+    text = re.sub(r"[^a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ\s]", " ", text)
+    
+    return [t for t in text.split() if t]
 # ──────────────────────────────────────────────────────────────
 # PART 2: KNOWLEDGE BASE  — N-gram frequency table
 # ──────────────────────────────────────────────────────────────

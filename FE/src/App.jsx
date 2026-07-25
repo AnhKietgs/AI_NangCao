@@ -16,6 +16,11 @@ export default function App() {
 
   const handlePredict = useCallback(async () => {
     if (!text.trim()) return;
+    const wordCount = text.trim().split(/\s+/).length;
+  if (nOrder === 3 && wordCount < 2) {
+    setError("Trigram (N=3) cần ít nhất 2 từ để dự đoán. Vui lòng nhập thêm từ.");
+    return;
+  }
     setLoading(true);
     setError("");
 
@@ -102,14 +107,21 @@ export default function App() {
               >
                 CONTEXT INPUT
               </span>
-              <div className="model-selector">
-                <button
-                  className={nOrder === 2 ? "active" : ""}
-                  onClick={() => setNOrder(2)}
-                >
-                  N=2
-                </button>
-              </div>
+            
+<div className="model-selector">
+  <button
+    className={nOrder === 2 ? "active" : ""}
+    onClick={() => setNOrder(2)}
+  >
+    N=2
+  </button>
+  <button
+    className={nOrder === 3 ? "active" : ""}
+    onClick={() => setNOrder(3)}
+  >
+    N=3
+  </button>
+</div>
             </div>
 
             <textarea
@@ -178,21 +190,6 @@ export default function App() {
             )}
           </section>
 
-          <section className="glass-card" style={{ marginTop: "2rem" }}>
-            <h3 style={{ marginBottom: "1.5rem", fontSize: "1rem" }}>
-               Architecture Pipeline
-            </h3>
-            <div className="pipeline-steps">
-              {["Raw Text", "FastAPI", "N-Gram", "Markov", "Softmax"].map(
-                (step, i) => (
-                  <div key={i} className="step-item">
-                    <div className="step-dot"></div>
-                    <span>{step}</span>
-                  </div>
-                ),
-              )}
-            </div>
-          </section>
         </div>
 
         {/* Cột phải: Kết quả */}

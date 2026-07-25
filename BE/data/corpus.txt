@@ -83,3 +83,21 @@ Problems in healthcare can be addressed with smart technology.
 Technology has enabled remote work and online education worldwide.
 Worldwide collaboration accelerates scientific discovery and progress.
 Progress in natural language processing enables chatbots and assistants.
+con bao thiu nang.
+con cá đi bộ dưới sông.
+con bò bị ngã trên đồng.
+con gà ra đường bị tông.
+con chó leo cầu bị té.
+Sinh viên Đại học Mở đang nghiên cứu về trí tuệ nhân tạo.
+Trí tuệ nhân tạo giúp giải quyết các bài toán phức tạp trong thực tế.
+Mô hình ngôn ngữ tự nhiên đang ngày càng trở nên phổ biến.
+Học máy là một nhánh quan trọng của khoa học máy tính.
+Chúng ta cần thu thập dữ liệu sạch để huấn luyện mô hình.
+Lập trình Python rất thú vị và dễ học đối với người mới bắt đầu.
+Thuật toán Markov giúp dự đoán từ tiếp theo dựa trên từ hiện tại.
+Dự án cuối kỳ yêu cầu chúng ta phải viết báo cáo bằng Latex.
+Giao diện người dùng được xây dựng bằng framework React mượt mà.
+Hệ thống thông minh có khả năng tự học từ kinh nghiệm thực tế.
+Con mèo đang ngủ ngon trên chiếc ghế sofa màu xanh.
+Con chó chạy tung tăng trong công viên vào mỗi buổi sáng.
+Thời tiết hôm nay rất đẹp để đi dạo ngoài trời.
